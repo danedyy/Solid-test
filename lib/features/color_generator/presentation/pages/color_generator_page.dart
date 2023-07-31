@@ -11,7 +11,7 @@ class ColorGeneratorPage extends StatefulWidget {
   /// [ColorGeneratorPage]. It is used by Flutter's widget tree to efficiently
   /// update the user interface.
 
-  const ColorGeneratorPage({Key? key}) : super(key: key);
+  const ColorGeneratorPage({super.key});
 
   @override
   State<ColorGeneratorPage> createState() => _ColorGeneratorPageState();

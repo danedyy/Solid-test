@@ -11,7 +11,7 @@ import 'package:solid_test/features/color_generator/presentation/providers/color
 class MyApp extends StatelessWidget {
   /// [MyApp] constructor class. It accepts an optional Key parameter that can
   /// be used to uniquely identify this widget.
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
