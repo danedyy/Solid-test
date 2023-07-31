@@ -32,7 +32,7 @@ I implemented the ColorGeneratorPage class, which is a StatefulWidget representi
 
 I wrote widget tests for the ColorGeneratorProvider and ColorGeneratorPage to ensure that the color generation and data management functionalities are working as expected.
 
-## 9. Bug Fixes
+## 9. Bug Fixes.
 
 I addressed some issues, such as MissingStubError and TestFailure, by adding necessary stubs and ensuring that methods are called as expected during testing.
 
