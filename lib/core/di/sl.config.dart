@@ -4,8 +4,6 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_lambdas, public_member_api_docs, require_trailing_commas
-// ignore_for_file: lines_longer_than_80_chars
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
@@ -22,7 +20,9 @@ import 'package:solid_test/features/color_generator/domain/repositories/color_ge
 
 class _$RegisterModule extends _i7.RegisterModule {}
 
-extension GetItInjectableX on _i1.GetIt {
+/// initializes the registration of main-scope dependencies inside of GetIt
+
+extension Sl on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
   Future<_i1.GetIt> init({
     String? environment,
@@ -38,11 +38,16 @@ extension GetItInjectableX on _i1.GetIt {
       () => registerModule.sharedPreferences,
       preResolve: true,
     );
-    gh.lazySingleton<_i4.LocalDatasource>(() => _i4.LocalDatasourceImpl(
-        sharedPreferences: gh<_i3.SharedPreferences>()));
-    gh.lazySingleton<_i5.ColorGeneratorRepository>(() =>
-        _i6.ColorGeneratorRepositoryImpl(
-            localDatasource: gh<_i4.LocalDatasource>()));
+    gh.lazySingleton<_i4.LocalDatasource>(
+      () => _i4.LocalDatasourceImpl(
+        sharedPreferences: gh<_i3.SharedPreferences>(),
+      ),
+    );
+    gh.lazySingleton<_i5.ColorGeneratorRepository>(
+      () => _i6.ColorGeneratorRepositoryImpl(
+        localDatasource: gh<_i4.LocalDatasource>(),
+      ),
+    );
 
     return this;
   }
