@@ -24,7 +24,6 @@ void main() {
     colorGeneratorProvider = ColorGeneratorProvider(mockRepository);
   });
 
-
   group('loadColors', () {
     test('should load colors from repository and notify listeners', () async {
       // Arrange

@@ -18,12 +18,12 @@ class ColorGeneratorPage extends StatefulWidget {
 }
 
 class _ColorGeneratorPageState extends State<ColorGeneratorPage> {
-
   @override
   void initState() {
     super.initState();
     Provider.of<ColorGeneratorProvider>(context, listen: false).loadColors();
   }
+
   final double _fontSize = 20;
   @override
   Widget build(BuildContext context) {
@@ -51,5 +51,4 @@ class _ColorGeneratorPageState extends State<ColorGeneratorPage> {
       ),
     );
   }
-
 }

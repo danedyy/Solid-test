@@ -21,7 +21,7 @@ class ColorGeneratorProvider extends ChangeNotifier {
 
   Color? _color;
   Color? _previousColor;
-  
+
   /// [color] It provides access to the current color (_color) of the
   ///  color generator. This getter allows external code, such as widgets,
   ///  to retrieve the current color without directly accessing the private
@@ -35,14 +35,13 @@ class ColorGeneratorProvider extends ChangeNotifier {
   /// accessing the private _previousColor instance variable.
 
   Color? get previousColor => _previousColor;
+
   /// Constructor class [ColorGeneratorProvider] The colorGeneratorRepository
   /// parameter is required and represents an instance
   /// of the ColorGeneratorRepository. This repository is used to handle data
   /// and business logic related to color generation.
 
   ColorGeneratorProvider(this.colorGeneratorRepository);
-
-
 
   /// [generateRandomColor] It generates a random RGB color and sets
   /// it as the current color (_color) in the provider.
